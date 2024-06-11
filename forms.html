@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <form><!--Principal tag para criar formulários-->
+        <input type="text" placeholder="Seu nome"/>
+        <!--input é usada para inserir um campo-->
+        <!--type é um atributo que dá uma vasta opção de tipos de campo, basta aperta o Ctrl+Espaço-->
+        <!--Placeholder é para indicar o que queremos que seja digitado no campo-->
+        <br/>
+        <label for="email">Seu e-mail</label><!--Label também serve para indicar que queremos que seja digitado no campo, sendo que ao lado do campo-->
+        <!--O atributo "for" serve para quando clicarmos no nome Seu e-mail o curso ir direito para dentro do campo, para isso basta colocar o nome do atributo que indica o campo-->
+        <!--Para concluir o comando criado pelo atributo "for" dentro do "label" precisamos criar um "ID" no atributo abaixo com o mesmo nome do "for"-->
+        <input id="email" type="email"/><!--Insere um campo de email-->
+        <br/>
+        <input type="tel" placeholder="Seu telefone"/>
+        <!--Type="tel" cria um campo para telefone-->
+        <br/>
+        <input type="number" max="100" min="1" step="10"/>
+        <!--input type="number" cria um campo para números onde teremos setas para aumentar e diminur-->
+        <!--Usando o max e o min podemos limitar até onde queremos que o campo aumente ou diminua-->
+        <!--O atributo step serve para colocar de quanto em quanto queremos aumente ou diminua os números do campo-->
+        <input type="file"/> <!--Serve para anexar arquivos--><br/>
+        <input type="color"/><!--Serve para criar uma caixa de seleção de cores--><br/>
+        <input type="checkbox" id="checkbox-termos"/><label for="checkbox-termos">Aceito os termos</label>
+        <!--O input type="checkbox" serve para criar uma caixa de marcação-->
+        <!--Usamos o label para criar o texto ao lado da caixa de marcação, em seguida usamos o atributo for="checkbox-termos" para fazer com que ao clicar no nome a caixa já seja selecionada, feito isso precisamos criar uma id no input type="checkbox" com o mesmo nome usado no "for" id="checkbox-termos"-->
+        <p>
+          Qual sua cor favorita?  
+        </p>
+        <!--O input type radio adicionar botões para pesquisa, ao lado colocamos um label para adicionar o texto do que seria aquele botão-->
+        <Input type="radio" name="cor-favorita" id="cor-vermelha"/><label for="cor-vermelha">Vermelho</label>
+        <Input type="radio" name="cor-favorita"  id="cor-verde"/><lable for="cor-verde">Verde
+        </lable>
+        <Input type="radio" name="cor-favorita"  id="cor-azul"/><label for="cor-azul">Azul</label>
+        <!--Em seguida precisamos adicionar o Id ao input e o for ao label, para quando clicarmos no nome da botão, o botão ser selecionado-->
+        <!--Para informar ao html que as três opções fazer parte da mesma pergunta usamos o atributo "name", fazendo isso ao clicar no botão, somente aquele botão será selecionado,ou seja, podemos marcar somente um botão e se quisermos marcar outra opção, o botão que marcamos anteriormente será desmarcado-->
+        <br/>
+        <br/>
+        <label>Qual seu filme favorito?</label><!--Usei label para criar a pergunta-->
+        
+        <!--Agora vamos inserir a caixa de selação conhecida como combo box, para isso usaremos a tag select e dentro do select criaremos as opções com a tag option-->
+        <select multiple>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <!--O atributo "Multiple" no select é usado para quando queremos selecionar várias opções, para selecionarmos mais de uma, selecionamos com o mouse.-->
+        <br/>
+        <textarea></textarea><!--Usado para criar caixa de texto-->
+        <button type="submit"><!--Tag usada para criar botões, o atributo type submit que dizer que queremos enviar formulário-->
+            Enviar
+        </button>
+        <button type="reset"><!--O atributo type reset quer dizer que o botão será para limpar a caixa de texto.-->
+            Limpar
+        </button>
+
+    </form> 
+</body>
+</html>
