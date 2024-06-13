@@ -7,18 +7,26 @@
 </head>
 <body>
     <h1>Formulários</h1>
-    <form><!--Principal tag para criar formulários-->
+    <form><!--O elemento <form> é usado para criar um formulário HTML que permite aos usuários inserir e enviar dados para um servidor.
+        Dentro das tags <form>, você coloca todos os elementos do formulário, como campos de entrada (<input>), menus suspensos (<select>), botões (<button>), entre outros.-->
         <input type="text" placeholder="Seu nome"/>
-        <!--input é usada para inserir um campo-->
-        <!--type é um atributo que dá uma vasta opção de tipos de campo, basta aperta o Ctrl+Espaço-->
-        <!--Placeholder é para indicar o que queremos que seja digitado no campo-->
+        <!--O elemento <input> é usado para criar um campo de entrada de dados no formulário HTML.-->
+        <!--O atributo type define o tipo de entrada que o campo deve aceitar. Neste caso, type="text" indica que este é um campo de texto simples, onde os usuários podem inserir qualquer tipo de texto.-->
+        <!--O atributo placeholder fornece um texto de exemplo dentro do campo de entrada.-->
+        <!--Quando o campo está vazio, o texto especificado em placeholder é exibido como uma dica para o usuário sobre qual tipo de informação deve ser inserida.
+        No exemplo dado, "Seu nome" é exibido dentro do campo de entrada como um exemplo do que o usuário deve inserir.-->
         <br/>
         <label for="email">Seu e-mail</label>
         <input id="email" type="email"/>
-        <!--Label também serve para indicar que queremos que seja digitado no campo, sendo que ao lado do campo-->
-        <!--O atributo "for" serve para quando clicarmos no nome Seu e-mail o curso ir direito para dentro do campo, para isso basta colocar o nome do atributo que indica o campo-->
-        <!--Para concluir o comando criado pelo atributo "for" dentro do "label" precisamos criar um "ID" no atributo abaixo com o mesmo nome do "for"-->
-        <!--Insere um campo de email-->
+        <!--<label for="email">Seu e-mail</label>:
+        Este elemento <label> cria um rótulo para um controle de formulário.
+        O atributo for="email" indica que este rótulo está associado ao controle de formulário que possui o atributo id="email".
+        Quando um usuário clica no rótulo "Seu e-mail", o navegador entende que o foco deve ser direcionado para o controle de formulário associado a id="email", que é o <input> a seguir.
+        
+        <input id="email" type="email"/>:
+        Este elemento <input> é usado para coletar dados do usuário, neste caso, um endereço de e-mail.
+        O atributo id="email" serve como um identificador único para este campo de entrada.
+        O atributo type="email" indica ao navegador que este campo deve aceitar apenas entradas que sigam o formato de um endereço de e-mail válido-->
         <br/>
         <input type="tel" placeholder="Seu telefone"/>
         <!--Type="tel" cria um campo para telefone-->
@@ -33,7 +41,7 @@
         <!--O input type="checkbox" serve para criar uma caixa de marcação-->
         <!--Usamos o label para criar o texto ao lado da caixa de marcação, em seguida usamos o atributo for="checkbox-termos" para fazer com que ao clicar no nome a caixa já seja selecionada, feito isso precisamos criar uma id no input type="checkbox" com o mesmo nome usado no "for" id="checkbox-termos"-->
         <p>
-          Qual sua cor favorita?  
+        Qual sua cor favorita?  
         </p>
         <!--O input type radio adicionar botões para pesquisa, ao lado colocamos um label para adicionar o texto do que seria aquele botão-->
         <Input type="radio" name="cor-favorita" id="cor-vermelha"/><label for="cor-vermelha">Vermelho</label>
@@ -50,7 +58,7 @@
         <select multiple>
             <option>A</option>
             <option>B</option>
-            <option>C</option>
+            <option>C</option> 2w
         </select>
         <!--O atributo "Multiple" no select é usado para quando queremos selecionar várias opções, para selecionarmos mais de uma, selecionamos com o mouse.-->
         <br/>
