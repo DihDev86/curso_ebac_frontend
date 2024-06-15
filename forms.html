@@ -29,46 +29,60 @@
         O atributo type="email" indica ao navegador que este campo deve aceitar apenas entradas que sigam o formato de um endereço de e-mail válido-->
         <br/>
         <input type="tel" placeholder="Seu telefone"/>
-        <!--Type="tel" cria um campo para telefone-->
+        <!--O <input> com type="tel" cria um campo onde os usuários podem inserir um número de telefone.
+        Quando o campo está vazio, "Seu telefone" é exibido dentro do campo como um guia visual para o usuário.
+        Ao clicar ou focar no campo, o texto do placeholder desaparece automaticamente, permitindo que o usuário insira seu próprio número de telefone.
+        Se o usuário não inserir nenhum texto e mudar o foco para outro elemento da página, o texto do placeholder reaparece para indicar que o campo está vazio.-->
         <br/>
         <input type="number" max="100" min="1" step="10"/>
-        <!--input type="number" cria um campo para números onde teremos setas para aumentar e diminur-->
-        <!--Usando o max e o min podemos limitar até onde queremos que o campo aumente ou diminua-->
-        <!--O atributo step serve para colocar de quanto em quanto queremos aumente ou diminua os números do campo-->
-        <input type="file"/> <!--Serve para anexar arquivos--><br/>
-        <input type="color"/><!--Serve para criar uma caixa de seleção de cores--><br/>
-        <input type="checkbox" id="checkbox-termos"/><label for="checkbox-termos">Aceito os termos</label>
-        <!--O input type="checkbox" serve para criar uma caixa de marcação-->
-        <!--Usamos o label para criar o texto ao lado da caixa de marcação, em seguida usamos o atributo for="checkbox-termos" para fazer com que ao clicar no nome a caixa já seja selecionada, feito isso precisamos criar uma id no input type="checkbox" com o mesmo nome usado no "for" id="checkbox-termos"-->
+        <!--O <input> com type="number" cria um campo onde os usuários podem inserir números.-->
+        <!--Os atributos min e max restringem os valores que podem ser inseridos no campo, garantindo que o valor esteja entre 1 e 100.-->
+        <!--O atributo step define o intervalo de números válidos que podem ser inseridos no campo.-->
+        <input type="file"/> 
+        <!--O <input> com type="file" cria um botão que, quando clicado, abre uma janela do sistema de arquivos do usuário, permitindo que ele selecione um ou mais arquivos--><br/>
+        <input type="color"/>
+        <!--O <input> com type="color" cria um campo que, quando clicado, abre um seletor de cores no navegador.--><br/>
+        <input type="checkbox" id="checkbox-termos"/>
+        <label for="checkbox-termos">Aceito os termos</label>
+        <!--O <input> com type="checkbox" cria uma caixa de seleção que o usuário pode marcar (selecionar) ou desmarcar (deselecionar).-->
+        <!--O <label> com o atributo for="checkbox-termos" está associado à caixa de seleção com id="checkbox-termos". Isso significa que quando o usuário clica no texto "Aceito os termos", a caixa de seleção correspondente é marcada ou desmarcada automaticamente.-->
+        <!--Este comportamento melhora a usabilidade e a acessibilidade, pois permite que o usuário clique no rótulo de texto para interagir com a caixa de seleção, em vez de ter que clicar exatamente na pequena caixa de seleção."-->
         <p>
         Qual sua cor favorita?  
         </p>
-        <!--O input type radio adicionar botões para pesquisa, ao lado colocamos um label para adicionar o texto do que seria aquele botão-->
-        <Input type="radio" name="cor-favorita" id="cor-vermelha"/><label for="cor-vermelha">Vermelho</label>
-        <Input type="radio" name="cor-favorita"  id="cor-verde"/><lable for="cor-verde">Verde
-        </lable>
-        <Input type="radio" name="cor-favorita"  id="cor-azul"/><label for="cor-azul">Azul</label>
-        <!--Em seguida precisamos adicionar o Id ao input e o for ao label, para quando clicarmos no nome da botão, o botão ser selecionado-->
-        <!--Para informar ao html que as três opções fazer parte da mesma pergunta usamos o atributo "name", fazendo isso ao clicar no botão, somente aquele botão será selecionado,ou seja, podemos marcar somente um botão e se quisermos marcar outra opção, o botão que marcamos anteriormente será desmarcado-->
-        <br/>
-        <br/>
-        <label>Qual seu filme favorito?</label><!--Usei label para criar a pergunta-->
         
-        <!--Agora vamos inserir a caixa de selação conhecida como combo box, para isso usaremos a tag select e dentro do select criaremos as opções com a tag option-->
+        <Input type="radio" name="cor-favorita" id="cor-vermelha"/><label for="cor-vermelha">Vermelho</label>
+        <Input type="radio" name="cor-favorita"  id="cor-verde"/><label for="cor-verde">Verde
+        </label>
+        <Input type="radio" name="cor-favorita"  id="cor-azul"/><label for="cor-azul">Azul</label>
+        <!--O elemento <input> com type="radio" cria um botão de rádio, que permite ao usuário selecionar uma entre várias opções mutuamente exclusivas.-->
+        <!--Cada <label> associado a um botão de rádio através do atributo for torna mais fácil para o usuário clicar no texto do rótulo para selecionar o botão de rádio correspondente, melhorando a usabilidade.-->
+        <!--Para informar ao html que as três opções fazem parte da mesma pergunta usamos o atributo "name", fazendo isso ao clicar no botão, somente aquele botão será selecionado,ou seja, podemos marcar somente um botão e se quisermos marcar outra opção, o botão que marcamos anteriormente será desmarcado-->
+        <br/>
+        <br/>
+        <label>Qual seu filme favorito?</label>
+        <!--O elemento <label> é usado para criar um rótulo de texto associado a um elemento de formulário.-->
+        <!--Ele fornece uma descrição ou pergunta que orienta o usuário sobre o que deve ser inserido em um campo de entrada.-->
         <select multiple>
             <option>A</option>
             <option>B</option>
-            <option>C</option> 2w
+            <option>C</option> 
         </select>
-        <!--O atributo "Multiple" no select é usado para quando queremos selecionar várias opções, para selecionarmos mais de uma, selecionamos com o mouse.-->
+        <!--O elemento <select> cria um menu suspenso ou uma caixa de seleção de lista.-->
+        <!--O atributo multiple permite que o usuário selecione várias opções da lista. Sem este atributo, o usuário só poderia selecionar uma única opção.-->
+        <!--O elemento <option> define uma opção em um menu suspenso ou em uma lista de seleção.-->
+        <!--Cada <option> dentro do <select> representa uma escolha que o usuário pode selecionar.-->
         <br/>
         <textarea></textarea><!--Usado para criar caixa de texto-->
-        <button type="submit"><!--Tag usada para criar botões, o atributo type submit que dizer que queremos enviar formulário-->
+        <button type="submit">
             Enviar
         </button>
-        <button type="reset"><!--O atributo type reset quer dizer que o botão será para limpar a caixa de texto.-->
+        <!--O elemento <button> é usado para criar um botão clicável em um formulário HTML.O atributo type="submit" define o comportamento do botão. Quando um botão com type="submit" é clicado, ele envia o formulário em que está contido ao servidor.-->
+        <button type="reset">
             Limpar
         </button>
+        <!--O elemento <button> é usado para criar um botão clicável em um formulário HTML.-->
+        <!--O atributo type="reset" define o comportamento do botão. Quando um botão com type="reset" é clicado, ele redefine todos os campos de entrada do formulário aos seus valores iniciais.-->
 
     </form> 
 </body>
