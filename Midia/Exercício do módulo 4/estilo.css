@@ -69,3 +69,19 @@ article a {
 article a:hover {
     text-decoration: underline;
 }
+
+.esportes{
+    background-color: rgb(100, 212, 100);
+}
+
+.economia{
+    background-color: rgb(242, 242, 139);
+}
+
+.tecnologia{
+    background-color: rgb(168, 168, 250);
+}
+
+.entretenimento{
+    background-color: rgb(242, 196, 140);
+}
