@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML com JS</title>
+    <link rel="stylesheet" href="./main.css" />
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            background-color: lightgreen;
+            width: 240px;
+        }
+
+        h2{
+            background-color: lightblue;
+            width: 125px;
+        }
+
+        #nome-beneficiario{
+            width: 250px;
+            padding: 5px;
+            
+        }
+
+        #numero-conta{
+            width: 250px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        
+        #valor-deposito{
+            width: 250px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        #descricao{
+            width: 250px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        #btn-depositar{
+            background-color: lightgreen;  
+            border-radius: 5px;
+        }
+
+        #btn-depositar:hover{
+            background-color:lightblue ;
+        }
+        .mensagem-sucesso{
+            background-color: lightgreen;
+            padding: 10px;
+            display: none;
+        }
+        .mensagem-de-erro{
+            padding: 8px;
+            background-color: red;
+            color: white;
+            margin-bottom: 8px;
+            font-size: 12px;
+            width: 247px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EBAC Banking</h1>
+        <h2>Depósitos</h2>
+        <form id="form-deposito">
+            <input type="text" id="nome-beneficiario" required placeholder="Nome do Beneficiário"><br>
+            <p class="mensagem-de-erro">O nome precisa ser completo!</p>
+            <input type="number" id="numero-conta" required placeholder="Número da Conta"><br>
+            <input type="number" id="valor-deposito" required placeholder="Valor do Depósito"><br>
+            <textarea placeholder="Descrição (opcional)" id="descricao"></textarea><br>
+            <button id="btn-depositar" type="submit">Depositar</button>
+        </form>
+        <p class="mensagem-sucesso"></p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
