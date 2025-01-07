@@ -1,7 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{/*O asterisco (*) é um seletor universal, que aplica as regras a todos os elementos da página.*/
+    margin: 0; /*Remove a margem padrão de todos os elementos.*/
+    padding: 0; /*Remove o preenchimento interno (espaço entre o conteúdo de um elemento e suas bordas) de todos os elementos.*/
+    
+    box-sizing: border-box;/*box-sizing: border-box; é uma propriedade que altera a forma como o tamanho de um elemento (largura e altura) é calculado. Ele determina se o padding e as bordas de um elemento são incluídos nas dimensões definidas (largura e altura) ou se são adicionados separadamente.*/
+
+    /*
+    O CSS box-sizing: border-box; é uma propriedade que altera a forma como o tamanho de um elemento (largura e altura) é calculado. Ele determina se o padding e as bordas de um elemento são incluídos nas dimensões definidas (largura e altura) ou se são adicionados separadamente.
+
+    Comportamento Padrão (box-sizing: content-box;)
+    content-box é o valor padrão do box-sizing.
+    A largura e a altura definidas não incluem o padding e as bordas.
+    Resultado: O tamanho final do elemento será maior do que a largura/altura definidas, porque o padding e a borda são adicionados.*/
+
     font-family: 'Roboto', sans-serif;
 }
 
@@ -11,7 +21,7 @@ body{
 }
 
 header{
-    display: flex; 
+    display: flex; /*A propriedade CSS display: flex; ativa o Flexbox, um modelo de layout flexível que facilita a organização e o alinhamento de elementos dentro de um contêiner. É especialmente útil para criar layouts responsivos.*/
     align-items: center;
     margin-bottom: 40px;
 }
@@ -68,7 +78,7 @@ table th{
 }
 
 table td{
-    padding: 16px 0;
+    padding: 8px 0;
     text-align: center;
     font-size: 24px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
