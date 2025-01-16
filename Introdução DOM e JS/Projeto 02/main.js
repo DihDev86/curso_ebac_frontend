@@ -1,6 +1,6 @@
-const form = document.getElementById('form-atividade');
-form.addEventListener('submit',function(e){
-    e.preventDefault();
+const form = document.getElementById('form-atividade');//Seleciona o formulário com o id form-atividade
+form.addEventListener('submit',function(e){//Adiciona um evento de submissão ao formulário, que executa uma função anônima quando o formulário é submetido.
+    e.preventDefault();//Previne o comportamento padrão do formulário, que é recarregar a página ao ser submetido.
 
     const inputNomeAtividade = document.getElementById("nome-atividade");
     const inputNotaAtividade = document.getElementById("nota-atividade");
