@@ -1,29 +1,70 @@
-const form = document.getElementById('form-atividade');//Seleciona o formulário com o id form-atividade
-form.addEventListener('submit',function(e){//Adiciona um evento de submissão ao formulário, que executa uma função anônima quando o formulário é submetido.
-    e.preventDefault();//Previne o comportamento padrão do formulário, que é recarregar a página ao ser submetido.
+const form = document.getElementById('form-atividade');
+const imgAprovado = '<img src = "./imagens/aprovado.png" alt = "Aprovado">';
+const imgReprovado = '<img src="./imagens/reprovado.png" alt = "Reprovado">';
+const atividades = [];
+const notas = [];
+const spanAprovado = '<span class=" resultado aprovado">Aprovado</span>';
+const spanReprovado = '<span class=" resultado reprovado">Reprovado</span>';
+const notaMinima = parseFloat(prompt("Digite a nota mínima para aprovação: "));
 
+let linhas = "";
+
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    adicionarLinha();
+    atualizar ();
+    atualizaMediaFinal ();
+
+});
+
+function adicionarLinha(){
     const inputNomeAtividade = document.getElementById("nome-atividade");
     const inputNotaAtividade = document.getElementById("nota-atividade");
     
-    let linha = '<tr>'// Cria uma string chamada linha com a abertura de uma linha de tabela HTML (<tr>).
-    linha += `<td> ${inputNomeAtividade.value}</td>`;//Adiciona uma célula (<td>) na linha da tabela contendo o valor do campo inputNomeAtividade. //${inputNomeAtividade.value} utiliza template literals (acentos graves `) para inserir dinamicamente o valor do campo no HTML.
-    linha += `<td> ${inputNotaAtividade.value}</td>`;// Adiciona mais uma célula à linha, contendo o valor do campo inputNotaAtividade
-
-
-    linha += `<td> ${inputNotaAtividade.value >= 7 ? `Aprovado` : `Reprovado`}</td>`;
-    /*O que faz: Adiciona mais uma célula (<td>) que exibe "Aprovado" se a nota for maior ou igual a 7, caso contrário, exibe "Reprovado".
-    Operador ternário (? :):
-    Condição: inputNotaAtividade.value >= 7
-    Se verdadeiro: Aprovado
-    Se falso: Reprovado*/
+    if(atividades.includes(inputNomeAtividade.value)){  
+        alert('Atividade já cadastrada');
+    }
+    else{
+        atividades.push(inputNomeAtividade.value);
+        notas.push(parseFloat(inputNotaAtividade.value));
+        
     
-    linha += `</tr>`;//Fecha a linha da tabela
+        let linha = '<tr>'
+        linha += `<td> ${inputNomeAtividade.value}</td>`;
+        linha += `<td> ${inputNotaAtividade.value}</td>`;
+        linha += `<td> ${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`;
+        linha += `</tr>`;
+    
+        linhas += linha;
+    }
 
-    /*Esse código cria dinamicamente uma linha de tabela (<tr>), com três células (<td>):
+    inputNomeAtividade.value = "";
+    inputNotaAtividade.value = "";
 
-    Nome da atividade.
-    Nota da atividade.
-    Status de aprovação (Aprovado/Reprovado). */
+}
 
-    alert(`A atividade feita foi de : ${inputNomeAtividade.value} e sua nota foi ${inputNotaAtividade.value}`)
-});
+function atualizar (){
+    const corpoTabela = document.querySelector('tbody');
+    corpoTabela.innerHTML= linhas;
+}
+
+function atualizaMediaFinal (){
+    const mediaFinal = calcularMediaFinal();
+
+    document.getElementById('media-final-valor').innerText = mediaFinal;
+
+    document.getElementById('media-final-resultado').innerHTML= mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
+
+    
+
+    console.log(media);
+}
+
+function calcularMediaFinal(){
+    let somaDasNotas = 0;
+    for (let i = 0; i < notas.length; i++){
+        somaDasNotas += notas[i];
+    }
+    return somaDasNotas / notas.length;
+}

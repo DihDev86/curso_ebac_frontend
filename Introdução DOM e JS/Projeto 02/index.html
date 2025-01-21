@@ -30,18 +30,20 @@
         </thead>
 
         <tbody><!--A tag <tbody> em HTML é usada para agrupar o corpo principal de uma tabela.-->
-            <tr>
-                <td>Atividade 1</td><!--A tag <td> em HTML é usada para definir uma célula de dados em uma tabela.-->
+            <!-- <tr>
+                <td>Atividade 1</td>A tag <td> em HTML é usada para definir uma célula de dados em uma tabela.
                 <td>7</td>
                 <td><img src="./imagens/aprovado.png" alt="Carinha feliz"></td>
-            </tr>
+            </tr> --> 
+            
+            <!--conteúdo estatico, Já temos o estimulo do usuario alimentando a tabela-->
         </tbody>
 
         <tfoot><!--A tag <tfoot> em HTML é usada para agrupar o rodapé de uma tabela.-->
             <tr>
-                <td>Média</td><!--A tag <td> em HTML é usada para definir uma célula de dados em uma tabela.-->
-                <td>7</td>
-                <td><span class="reprovado">Aprovado!</span></td>
+                <td>Média</td>
+                <td id="media-final-valor">---</td>
+                <td id="media-final-resultado"><span class="resultado">---</span></td>
             </tr>
         </tfoot>
     </table>

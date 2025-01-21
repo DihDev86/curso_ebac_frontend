@@ -1,17 +1,7 @@
-*{/*O asterisco (*) é um seletor universal, que aplica as regras a todos os elementos da página.*/
-    margin: 0; /*Remove a margem padrão de todos os elementos.*/
-    padding: 0; /*Remove o preenchimento interno (espaço entre o conteúdo de um elemento e suas bordas) de todos os elementos.*/
-    
-    box-sizing: border-box;/*box-sizing: border-box; é uma propriedade que altera a forma como o tamanho de um elemento (largura e altura) é calculado. Ele determina se o padding e as bordas de um elemento são incluídos nas dimensões definidas (largura e altura) ou se são adicionados separadamente.*/
-
-    /*
-    O CSS box-sizing: border-box; é uma propriedade que altera a forma como o tamanho de um elemento (largura e altura) é calculado. Ele determina se o padding e as bordas de um elemento são incluídos nas dimensões definidas (largura e altura) ou se são adicionados separadamente.
-
-    Comportamento Padrão (box-sizing: content-box;)
-    content-box é o valor padrão do box-sizing.
-    A largura e a altura definidas não incluem o padding e as bordas.
-    Resultado: O tamanho final do elemento será maior do que a largura/altura definidas, porque o padding e a borda são adicionados.*/
-
+*{
+    margin: auto 0; 
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -91,8 +81,7 @@ table td img{
 .resultado{
     padding: 8px;
     font-weight: bold;
-    color: #fff;
-    background-color: #000;
+    color:black;
     border-radius: 3px;
 }
 
