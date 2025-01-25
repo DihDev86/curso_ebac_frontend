@@ -1,0 +1,92 @@
+* {
+    margin: 0; /* Remove as margens de todos os elementos */
+    padding: 0; /* Remove o preenchimento de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e preenchimento no tamanho total dos elementos */
+    font-family: 'Roboto', sans-serif; /* Define a fonte padrão como Roboto */
+}
+
+header {
+    background-color: rgb(85, 98, 240); /* Define a cor de fundo do cabeçalho */
+    padding: 16px 0; /* Adiciona preenchimento ao topo e ao fundo do cabeçalho */
+    color: rgb(242, 233, 233); /* Define a cor do texto do cabeçalho */
+    display: flex; /* Define o layout do cabeçalho como flexível */
+    border-bottom: 16px solid rgb(16, 5, 140); /* Adiciona uma borda inferior ao cabeçalho */
+    justify-content: center; /* Centraliza o conteúdo do cabeçalho horizontalmente */
+    text-transform: uppercase; /* Transforma o texto do cabeçalho em maiúsculas */
+    font-style: italic; /* Define o estilo da fonte do cabeçalho como itálico */
+}
+
+header button {
+    margin-left: 16px; /* Adiciona margem à esquerda dos botões no cabeçalho */
+}
+
+form {
+    background-color: #c8d6e5; /* Define a cor de fundo do formulário */
+    padding: 24px 0; /* Adiciona preenchimento ao topo e ao fundo do formulário */
+    text-align: center; /* Centraliza o texto dentro do formulário */
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 16px; /* Adiciona margem inferior ao título do formulário */
+}
+
+input, 
+button {
+    padding: 8px; /* Adiciona preenchimento aos campos de entrada e botões */
+}
+
+button {
+    background-color: #009432; /* Define a cor de fundo dos botões */
+    border: none; /* Remove a borda dos botões */
+    font-weight: bold; /* Define o peso da fonte dos botões como negrito */
+    text-transform: uppercase; /* Transforma o texto dos botões em maiúsculas */
+    color: #fff; /* Define a cor do texto dos botões como branco */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre os botões */
+}
+
+#botao-cancelar {
+    background-color: red; /* Define a cor de fundo do botão de cancelar como vermelho */
+}
+
+/* Define um contêiner com largura máxima de 1200px e centraliza horizontalmente */
+.container {
+    max-width: 1200px; /* Define a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 20px; /* Adiciona preenchimento dentro do contêiner */
+}
+
+/* Estiliza o cabeçalho com uma cor de fundo e preenchimento */
+.header {
+    background-color: #f8f9fa; /* Define a cor de fundo do cabeçalho */
+    padding: 10px 0; /* Adiciona preenchimento ao topo e ao fundo do cabeçalho */
+    text-align: center; /* Centraliza o texto dentro do cabeçalho */
+}
+
+/* Estiliza os links de navegação dentro do cabeçalho */
+.header nav a {
+    color: #007bff; /* Define a cor do texto dos links de navegação */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    margin: 0 15px; /* Adiciona margem à esquerda e à direita de cada link */
+}
+
+/* Adiciona efeito de hover aos links de navegação */
+.header nav a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* Estiliza a área de conteúdo principal */
+.main-content {
+    background-color: #ffffff; /* Define a cor de fundo do conteúdo principal */
+    padding: 20px; /* Adiciona preenchimento dentro da área de conteúdo principal */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao redor do conteúdo principal */
+}
+
+/* Estiliza o rodapé com uma cor de fundo e preenchimento */
+.footer {
+    background-color: #f1f1f1; /* Define a cor de fundo do rodapé */
+    padding: 10px 0; /* Adiciona preenchimento ao topo e ao fundo do rodapé */
+    text-align: center; /* Centraliza o texto dentro do rodapé */
+    font-size: 14px; /* Define o tamanho da fonte do texto do rodapé */
+    color: #6c757d; /* Define a cor do texto do rodapé */
+}

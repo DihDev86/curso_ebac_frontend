@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para responsividade -->
+    <title>JQuery</title> <!-- Define o título da página -->
+    <link rel="preconnect" href="http://fonts.googleapis.com"> <!-- Otimiza a conexão com o Google Fonts -->
+    <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin> <!-- Otimiza a conexão com o Google Fonts com suporte a CORS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Importa a fonte Roboto do Google Fonts -->
+    <link rel="stylesheet" href="./main.css"> <!-- Link para o arquivo de estilos CSS -->
+
+</head>
+
+<body>
+    <header>
+        <h1>Galeria de Fotos</h1> <!-- Título principal da página -->
+        <button type="button">Nova imagem +</button> <!-- Botão para adicionar uma nova imagem -->
+    </header>
+    <form>
+        <h2>Inserir nova imagem</h2> <!-- Título do formulário -->
+        <input type="url" required placeholder="URL da imagem"> <!-- Campo de entrada para a URL da imagem, obrigatório -->
+        <button type="submit">Adicionar</button> <!-- Botão para enviar o formulário -->
+        <button type="reset" id="botao-cancelar">Cancelar</button> <!-- Botão para resetar o formulário -->
+    </form>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script> <!-- Importa a biblioteca jQuery -->
+    <script src="./main.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+
+</html>
+
