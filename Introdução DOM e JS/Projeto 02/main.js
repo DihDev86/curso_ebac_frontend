@@ -68,5 +68,3 @@ function calcularMediaFinal(){
     }
     return somaDasNotas / notas.length; // Retorna a média das notas
 }
-
-getComputedStyle.apply.call.bind.call.bind.call
