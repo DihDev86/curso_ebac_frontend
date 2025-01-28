@@ -49,44 +49,41 @@ button {
     background-color: red; /* Define a cor de fundo do botão de cancelar como vermelho */
 }
 
-/* Define um contêiner com largura máxima de 1200px e centraliza horizontalmente */
-.container {
-    max-width: 1200px; /* Define a largura máxima do contêiner */
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    padding: 20px; /* Adiciona preenchimento dentro do contêiner */
+ul{
+    display: flex;/*Coloca as imagens uma do lado da outra*/
+    flex-wrap: wrap;/*permite que os itens dentro de um contêiner flexível se movam para a próxima linha quando não há espaço suficiente em uma única linha. Isso ajuda a criar layouts que se ajustam melhor a diferentes tamanhos de tela.*/
 }
 
-/* Estiliza o cabeçalho com uma cor de fundo e preenchimento */
-.header {
-    background-color: #f8f9fa; /* Define a cor de fundo do cabeçalho */
-    padding: 10px 0; /* Adiciona preenchimento ao topo e ao fundo do cabeçalho */
-    text-align: center; /* Centraliza o texto dentro do cabeçalho */
+ul li{
+    max-width: 25%;
+    list-style: none;/*Tira a marcação da lista*/
+    position: relative;/*permite ajustar a posição de um elemento em relação à sua posição original, sem removê-lo do fluxo normal da página.*/
+    max-height: 280px;
+    overflow-y: hidden;/*controla o que acontece quando o conteúdo de um elemento excede sua altura, permitindo rolagem vertical ou ocultação do excesso.*/
 }
 
-/* Estiliza os links de navegação dentro do cabeçalho */
-.header nav a {
-    color: #007bff; /* Define a cor do texto dos links de navegação */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    margin: 0 15px; /* Adiciona margem à esquerda e à direita de cada link */
+ul li img{
+    width:100% ;
 }
 
-/* Adiciona efeito de hover aos links de navegação */
-.header nav a:hover {
-    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+.overlay-imagem-link{
+    padding: 16px;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;/*Faz com que os elementos filhos que estão dentro do elemento pai (position relative) se movam da melhor forma*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;/*coloca uma opacidade no elemento*/
+    transition: all ease .5s;/*Coloca uma transição de meio segundo ao ser clicado no link*/
 }
 
-/* Estiliza a área de conteúdo principal */
-.main-content {
-    background-color: #ffffff; /* Define a cor de fundo do conteúdo principal */
-    padding: 20px; /* Adiciona preenchimento dentro da área de conteúdo principal */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao redor do conteúdo principal */
+.overlay-imagem-link a{
+    color: white;
+    text-decoration: none;
 }
 
-/* Estiliza o rodapé com uma cor de fundo e preenchimento */
-.footer {
-    background-color: #f1f1f1; /* Define a cor de fundo do rodapé */
-    padding: 10px 0; /* Adiciona preenchimento ao topo e ao fundo do rodapé */
-    text-align: center; /* Centraliza o texto dentro do rodapé */
-    font-size: 14px; /* Define o tamanho da fonte do texto do rodapé */
-    color: #6c757d; /* Define a cor do texto do rodapé */
+ul li:hover .overlay-imagem-link {/*Coloca a opacidade tirada acima quando clicamos na imagem*/
+    opacity: 1;
 }
+
+
